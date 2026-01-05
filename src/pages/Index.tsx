@@ -18,6 +18,7 @@ type Question = {
 type Variant = {
   id: number;
   name: string;
+  category: string;
   questions: Question[];
 };
 
@@ -25,6 +26,7 @@ const variants: Variant[] = [
   {
     id: 1,
     name: 'Вариант 1',
+    category: 'Тест по дробям',
     questions: [
       { id: 1, text: 'Найдите значение выражений:\n(24 + 16) + 38 =\n34 + (21 + 16) + 55 =', answer: '(24 + 16) + 38 = 78\n34 + (21 + 16) + 55 = 126' },
       { id: 2, text: 'Не выполняя вычислений назовите большую из сумм:\n242 + 16 или 224 + 12', answer: '242 + 16 больше, чем 224 + 12' },
@@ -36,6 +38,7 @@ const variants: Variant[] = [
   {
     id: 2,
     name: 'Вариант 2',
+    category: 'Тест по дробям',
     questions: [
       { id: 1, text: 'Найдите значение выражений:\n(53 + 12) + 37 =\n18 + (44 + 21) + 72 =', answer: '(53 + 12) + 37 = 102\n18 + (44 + 21) + 72 = 155' },
       { id: 2, text: 'Не выполняя вычислений назовите большую из сумм:\n194 + 29 или 211 + 18.', answer: '211 + 18 больше 194 + 29.' },
@@ -47,6 +50,7 @@ const variants: Variant[] = [
   {
     id: 3,
     name: 'Вариант 3',
+    category: 'Тест по дробям',
     questions: [
       { id: 1, text: 'Найдите значение выражений:\n(31 + 52) + 11 =\n92 + (43 + 15) + 48 =', answer: '(31 + 52) + 11 = 94\n92 + (43 + 15) + 48 = 198' },
       { id: 2, text: 'Не выполняя вычислений назовите большую из сумм:\n182 + 72 или 159 + 64.', answer: '182 + 72 больше чем 159 + 64' },
@@ -58,12 +62,61 @@ const variants: Variant[] = [
   {
     id: 4,
     name: 'Вариант 4',
+    category: 'Тест по дробям',
     questions: [
       { id: 1, text: 'Решите примеры:\n67 + (71 - 56) =\n(39 + 14) + (39 + 22) =', answer: '67 + (71 - 56) = 82\n(39 + 14) + (39 + 22) = 114' },
       { id: 2, text: 'Сравните не выполняя вычислений:\n735 + 471 или 633 + 341.', answer: '735 + 471 больше чем 633 + 341.' },
       { id: 3, text: 'Одна из сторон треугольника равна 39 см вторая на 16 см меньше, а третья на 11 см больше чем вторая. Вычислите периметр треугольника.', answer: '1) 39 - 16 = 23 (см) вторая сторона треугольника;\n2) 23 + 11 = 34 (см) третья сторона треугольника;\n3) 39 + 23 + 34 = 96 (см).\nОтвет: периметр треугольника равен 96 см.' },
       { id: 4, text: 'Туристы за 3 дня преодолели 61 км. В первый день они прошли 12 км, во второй на 3 км меньше. Весь остальной путь они проехали на автобусе за третий день. Какое расстояние преодолели туристы за третий день?', answer: '1) 12 - 3 = 9 (км) прошли туристы во второй день;\n2) 12 + 9 = 21 (км) в первый и второй день вместе;\n3) 61 - 21 = 40 (км).\nОтвет: в третий день туристы преодолели 40 км.' },
       { id: 5, text: 'Вычислите:\n562 - (49 - 18 + 11) + (51 - 42) =', answer: '562 - (49 - 18 + 11) + (51 - 42) = 529' },
+    ],
+  },
+  {
+    id: 5,
+    name: 'Вариант 5',
+    category: 'Сложение и вычитание',
+    questions: [
+      { id: 1, text: 'Выполните сложение:\n3/5 + 1/5 =\n2/7 + 3/7 =', answer: '3/5 + 1/5 = 4/5\n2/7 + 3/7 = 5/7' },
+      { id: 2, text: 'Выполните вычитание:\n7/9 - 2/9 =\n5/8 - 3/8 =', answer: '7/9 - 2/9 = 5/9\n5/8 - 3/8 = 2/8 = 1/4' },
+      { id: 3, text: 'Решите уравнение:\nx + 2/5 = 4/5', answer: 'x + 2/5 = 4/5\nx = 4/5 - 2/5\nx = 2/5\nОтвет: x = 2/5' },
+      { id: 4, text: 'Маша прочитала 3/8 книги в первый день и 2/8 книги во второй день. Какую часть книги прочитала Маша за два дня?', answer: '3/8 + 2/8 = 5/8\nОтвет: Маша прочитала 5/8 книги.' },
+      { id: 5, text: 'Сравните дроби (поставьте знак <, > или =):\n3/7 ... 5/7\n4/9 ... 2/9', answer: '3/7 < 5/7\n4/9 > 2/9' },
+    ],
+  },
+  {
+    id: 6,
+    name: 'Вариант 6',
+    category: 'Сложение и вычитание',
+    questions: [
+      { id: 1, text: 'Выполните сложение:\n1/6 + 2/6 =\n4/11 + 3/11 =', answer: '1/6 + 2/6 = 3/6 = 1/2\n4/11 + 3/11 = 7/11' },
+      { id: 2, text: 'Выполните вычитание:\n8/10 - 3/10 =\n9/13 - 5/13 =', answer: '8/10 - 3/10 = 5/10 = 1/2\n9/13 - 5/13 = 4/13' },
+      { id: 3, text: 'Решите уравнение:\ny - 1/7 = 3/7', answer: 'y - 1/7 = 3/7\ny = 3/7 + 1/7\ny = 4/7\nОтвет: y = 4/7' },
+      { id: 4, text: 'От веревки длиной 7/12 метра отрезали 2/12 метра. Какая длина веревки осталась?', answer: '7/12 - 2/12 = 5/12\nОтвет: осталось 5/12 метра веревки.' },
+      { id: 5, text: 'Сравните дроби (поставьте знак <, > или =):\n6/11 ... 4/11\n2/15 ... 8/15', answer: '6/11 > 4/11\n2/15 < 8/15' },
+    ],
+  },
+  {
+    id: 7,
+    name: 'Вариант 7',
+    category: 'Периметр и площадь',
+    questions: [
+      { id: 1, text: 'Найдите периметр прямоугольника, если его длина 8 см, а ширина 5 см.', answer: 'P = 2(a + b) = 2(8 + 5) = 2 × 13 = 26 см\nОтвет: периметр прямоугольника 26 см.' },
+      { id: 2, text: 'Найдите площадь прямоугольника, если его длина 6 см, а ширина 4 см.', answer: 'S = a × b = 6 × 4 = 24 см²\nОтвет: площадь прямоугольника 24 см².' },
+      { id: 3, text: 'Периметр квадрата равен 20 см. Найдите длину его стороны.', answer: 'P = 4a\n20 = 4a\na = 20 : 4\na = 5 см\nОтвет: сторона квадрата 5 см.' },
+      { id: 4, text: 'Площадь прямоугольника 48 см², его длина 8 см. Найдите ширину прямоугольника.', answer: 'S = a × b\n48 = 8 × b\nb = 48 : 8\nb = 6 см\nОтвет: ширина прямоугольника 6 см.' },
+      { id: 5, text: 'Найдите площадь квадрата со стороной 7 см.', answer: 'S = a² = 7² = 49 см²\nОтвет: площадь квадрата 49 см².' },
+    ],
+  },
+  {
+    id: 8,
+    name: 'Вариант 8',
+    category: 'Периметр и площадь',
+    questions: [
+      { id: 1, text: 'Найдите периметр квадрата со стороной 9 см.', answer: 'P = 4a = 4 × 9 = 36 см\nОтвет: периметр квадрата 36 см.' },
+      { id: 2, text: 'Найдите площадь прямоугольника, если его длина 12 см, а ширина 3 см.', answer: 'S = a × b = 12 × 3 = 36 см²\nОтвет: площадь прямоугольника 36 см².' },
+      { id: 3, text: 'Периметр прямоугольника равен 30 см, его длина 10 см. Найдите ширину.', answer: 'P = 2(a + b)\n30 = 2(10 + b)\n15 = 10 + b\nb = 15 - 10\nb = 5 см\nОтвет: ширина прямоугольника 5 см.' },
+      { id: 4, text: 'Площадь квадрата 64 см². Найдите длину его стороны.', answer: 'S = a²\n64 = a²\na = 8 см\nОтвет: сторона квадрата 8 см.' },
+      { id: 5, text: 'Длина прямоугольника 15 см, а ширина в 3 раза меньше. Найдите площадь прямоугольника.', answer: '1) 15 : 3 = 5 см (ширина)\n2) S = 15 × 5 = 75 см²\nОтвет: площадь прямоугольника 75 см².' },
     ],
   },
 ];
@@ -201,6 +254,7 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <div className="flex justify-between items-center mb-6 animate-fade-in">
               <div>
+                <Badge variant="secondary" className="mb-2">{variant.category}</Badge>
                 <h1 className="text-2xl md:text-3xl font-bold">{variant.name}</h1>
                 <p className="text-muted-foreground">Ученик: {studentName}</p>
               </div>
@@ -273,28 +327,33 @@ const Index = () => {
               <TabsTrigger value="results">Мои результаты</TabsTrigger>
             </TabsList>
 
-            <TabsContent value="tests" className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {variants.map((variant) => (
-                  <Card key={variant.id} className="hover:shadow-lg transition-all animate-scale-in cursor-pointer group">
-                    <CardHeader>
-                      <CardTitle className="flex items-center justify-between">
-                        {variant.name}
-                        <Icon name="FileText" size={24} className="text-primary group-hover:scale-110 transition-transform" />
-                      </CardTitle>
-                      <CardDescription>
-                        {variant.questions.length} заданий
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <Button onClick={() => handleStartTest(variant.id)} className="w-full">
-                        Начать тест
-                        <Icon name="Play" size={20} className="ml-2" />
-                      </Button>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
+            <TabsContent value="tests" className="space-y-6">
+              {Array.from(new Set(variants.map(v => v.category))).map(category => (
+                <div key={category} className="space-y-4">
+                  <h2 className="text-2xl font-bold text-primary">{category}</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {variants.filter(v => v.category === category).map((variant) => (
+                      <Card key={variant.id} className="hover:shadow-lg transition-all animate-scale-in cursor-pointer group">
+                        <CardHeader>
+                          <CardTitle className="flex items-center justify-between">
+                            {variant.name}
+                            <Icon name="FileText" size={24} className="text-primary group-hover:scale-110 transition-transform" />
+                          </CardTitle>
+                          <CardDescription>
+                            {variant.questions.length} заданий
+                          </CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                          <Button onClick={() => handleStartTest(variant.id)} className="w-full">
+                            Начать тест
+                            <Icon name="Play" size={20} className="ml-2" />
+                          </Button>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </TabsContent>
 
             <TabsContent value="results" className="space-y-4">
