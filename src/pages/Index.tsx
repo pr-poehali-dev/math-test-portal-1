@@ -160,7 +160,7 @@ const Index = () => {
             <div className="mx-auto w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <Icon name="GraduationCap" size={40} className="text-primary" />
             </div>
-            <CardTitle className="text-3xl font-bold">Математика 6 класс</CardTitle>
+            <CardTitle className="text-3xl font-bold">Математика 5 класс</CardTitle>
             <CardDescription className="text-base">Введи своё имя, чтобы начать тест</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
