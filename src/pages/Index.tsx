@@ -88,7 +88,7 @@ const Index = () => {
   const { toast } = useToast();
 
   const handleLogin = (name: string) => {
-    if (name.toLowerCase() === 'никитовский учитель') {
+    if (name.toLowerCase() === 'никитовский') {
       setCurrentView('teacher');
       toast({
         title: 'Добро пожаловать, учитель!',
